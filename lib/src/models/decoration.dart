@@ -178,6 +178,7 @@ class FieldDecoration {
     this.labelText,
     this.hintText = 'Select',
     this.border,
+    this.label,
     this.focusedBorder,
     this.disabledBorder,
     this.errorBorder,
@@ -197,6 +198,8 @@ class FieldDecoration {
 
   /// The hint text to display in the dropdown field.
   final String? hintText;
+  ///label to display label in the dropdown field
+  final Widget? label;
 
   /// The border of the dropdown field.
   final InputBorder? border;
