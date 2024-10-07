@@ -89,6 +89,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       MultiDropdown<User>(
                         items: items,
+                        singleSelect: true ,
+                        singelSelectedItemStyle: TextStyle(fontSize: 40),
                         controller: controller,
                         enabled: true,
                         searchEnabled: true,

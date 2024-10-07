@@ -93,6 +93,7 @@ class MultiDropdown<T extends Object> extends StatefulWidget {
     this.dropdownItemDecoration = const DropdownItemDecoration(),
     this.autovalidateMode = AutovalidateMode.disabled,
     this.singleSelect = false,
+    this.singelSelectedItemStyle ,
     this.itemSeparator,
     this.controller,
     this.validator,
@@ -154,6 +155,7 @@ class MultiDropdown<T extends Object> extends StatefulWidget {
     this.onSelectionChange,
     this.onSearchChange,
     this.closeOnBackButton = false,
+    this.singelSelectedItemStyle,
     Key? key,
   })  : items = const [],
         super(key: key);
@@ -163,6 +165,7 @@ class MultiDropdown<T extends Object> extends StatefulWidget {
 
   /// The selection type of the dropdown.
   final bool singleSelect;
+  final TextStyle? singelSelectedItemStyle;
 
   /// The configuration for the chips.
   final ChipDecoration chipDecoration;
@@ -574,7 +577,7 @@ class _MultiDropdownState<T extends Object> extends State<MultiDropdown<T>> {
     final selectedOptions = _dropdownController.selectedItems;
 
     if (widget.singleSelect) {
-      return Text(selectedOptions.first.label);
+      return Text(selectedOptions.first.label,style:widget.singelSelectedItemStyle,);
     }
 
     return _buildSelectedItems(selectedOptions);
