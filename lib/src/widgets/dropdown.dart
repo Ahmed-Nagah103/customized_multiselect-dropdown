@@ -157,6 +157,7 @@ class _Dropdown<T> extends StatelessWidget {
 
     return Ink(
       child: ListTile(
+        titleTextStyle: TextStyle( fontSize: 20),
         title: Text(option.label),
         trailing: trailing,
         dense: true,
